@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="input-container">
+    <input #inputNumber type="text" (blur)="onTextChange(inputNumber.value)">
+  </div>
+  <div class="option-container">
+    <select #selected name="type" (click)="onSelectOption(selected.value)">
+      <option value=""></option>
+      <option value="prime">isPrime</option>
+      <option value="fibinucci">isFibonacci</option>
+    </select>
+  </div>
+  <div class="result-container">
+    <div class="answer" *ngIf="foundResult">
+      <p>{{result}}</p>
+    </div>
+  </div>
+</div>

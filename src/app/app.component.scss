@@ -1,0 +1,31 @@
+.container{
+    display: grid;
+    grid-template-columns: 200px auto 300px;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "input | type | result";
+    height: 100%;
+    margin: 20px;
+}
+.input-container{
+    grid-area: "input";
+    background: lightcoral;
+}
+.option-container{
+    grid-area: "type";
+    background: lightgreen;
+    min-width: 100px;
+}
+.result-container{
+    grid-area: "result";
+    background: lightsalmon;
+}
+
+@media only screen and (max-width: 600px) {
+    .option-container {
+      background-color: lightblue;
+    }
+    .container{
+        overflow-x: scroll;
+    }
+  }
