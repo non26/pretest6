@@ -21,6 +21,9 @@ export class AppComponent {
   onTextChange(input: string){
     if (input){
       var inputNumber = Number(input);
+      if (input.indexOf(".") > -1){
+        this.inputText.nativeElement.value = Math.round(inputNumber)
+      }
       if (inputNumber < 0){
         this.inputText.nativeElement.value = 1;
         inputNumber = 1;
